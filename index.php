@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-
+        echo "Hello Github";
     ?>
 </body>
 </html>
