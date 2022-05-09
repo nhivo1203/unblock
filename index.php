@@ -9,7 +9,28 @@
 </head>
 <body>
     <?php
+        $number = 1000;
 
-    ?>
+        echo "<h1>Hello Github</h1>";
+
+        switch ($number) {
+            case 100:
+                echo "so 100";
+                break;
+            case 10:
+                echo "so 10";
+                break;
+            default:
+                echo "khong co so de hien thi";
+                break;
+        }
+
+        $count = 1;
+        while ($count <= 10) {
+            echo $count . "<br>";
+            $count++;
+        }
+
+        ?>
 </body>
 </html>
