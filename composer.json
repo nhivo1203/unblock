@@ -1,0 +1,15 @@
+{
+  "name": "nhivo/learningphp",
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "nhivo1203",
+      "email": "nhivo1604230@gmail.com"
+    }
+  ],
+  "require": {}
+}
