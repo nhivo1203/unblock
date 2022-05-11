@@ -1,17 +1,19 @@
 <?php
 
-
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
-</head>
-<body>
-    <h1>Contact</h1>
-</body>
-</html>
+<h1>Contact</h1>
+
+<form action="" method="post">
+    <div class="mb-3">
+        <label>Subject</label>
+        <input type="text" name="subject" class="form-control">
+    </div>    <div class="mb-3">
+        <label>Email address</label>
+        <input type="email" name="email" class="form-control">
+    </div>    <div class="mb-3">
+        <label>Body</label>
+        <textarea type="text" name="body" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

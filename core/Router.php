@@ -21,13 +21,6 @@ class Router
         $this->request = $request;
     }
 
-    /**
-     * @param $view
-     * @return
-     */
-    public function renderView($view) {
-        include_once (__DIR__ .  "../Views/$view.php");
-    }
 
     /**
      * @param $path
@@ -40,6 +33,17 @@ class Router
     }
 
     /**
+     * @param $path
+     * @param $callback
+     * @return void
+     */
+    public function post($path, $callback): void
+    {
+        $this->routes['post'][$path] = $callback;
+    }
+
+
+    /**
      * @return string
      */
     public function resolve()
@@ -48,11 +52,52 @@ class Router
         $method = $this->request->getMethod();
         $callback = $this->routes[$method][$path] ?? false;
         if ($callback === false) {
-            echo "Not Found";
+            Application::$app->response->setStatusCode(404);
+            return $this->renderView("_404");
         }
-        if(is_string($callback)) {
+        if (is_string($callback)) {
             return $this->renderView($callback);
         }
         return call_user_func($callback);
     }
+
+    /**
+     * @param $view
+     * @return array|false|string|string[]
+     */
+    public function renderView($view)
+    {
+        $layoutContent = $this->layoutContent();
+        $viewContent = $this->renderOnlyView($view);
+        return str_replace('{{content}}', $viewContent, $layoutContent);
+    }
+    public function renderContent($viewContent)
+    {
+        $layoutContent = $this->layoutContent();
+        return str_replace('{{content}}', $viewContent, $layoutContent);
+    }
+
+
+
+    /**
+     * @return false|string
+     */
+    protected function layoutContent()
+    {
+        ob_start();
+        include_once(Application::$ROOT_DIR . "/Views/layouts/main.php");
+        return ob_get_clean();
+    }
+
+    /**
+     * @param $view
+     * @return false|string
+     */
+    protected function renderOnlyView($view)
+    {
+        ob_start();
+        include_once(Application::$ROOT_DIR . "/Views/$view.php");
+        return ob_get_clean();
+    }
+
 }
