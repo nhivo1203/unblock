@@ -23,9 +23,9 @@ class Router
 
     /**
      * @param $view
-     * @return void
+     * @return
      */
-    public function renderView($view): string {
+    public function renderView($view) {
         include_once (__DIR__ .  "../Views/$view.php");
     }
 
