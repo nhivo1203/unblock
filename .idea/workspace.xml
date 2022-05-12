@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73751673-c5f9-47a7-a30a-82da3ee73c27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Views/_404.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/layouts/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/learningphp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learningphp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Router/RouterTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Application.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -106,7 +98,9 @@
       <workItem from="1652065715560" duration="19474000" />
       <workItem from="1652148579017" duration="15738000" />
       <workItem from="1652233466081" duration="16233000" />
-      <workItem from="1652252555680" duration="10813000" />
+      <workItem from="1652252555680" duration="11069000" />
+      <workItem from="1652320606892" duration="6845000" />
+      <workItem from="1652328777870" duration="391000" />
     </task>
     <servers />
   </component>
