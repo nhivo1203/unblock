@@ -2,8 +2,8 @@
 
 namespace app\Tests\Router;
 
-use app\core\Request;
-use app\core\Router;
+use app\Core\Request;
+use app\Core\Router;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase

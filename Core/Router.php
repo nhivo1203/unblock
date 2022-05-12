@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace app\Core;
 
 use function is_string;
 
@@ -16,7 +16,7 @@ class Router
     /**
      * @param Request $request
      */
-    public function __construct(\app\core\Request $request)
+    public function __construct(\app\Core\Request $request)
     {
         $this->request = $request;
     }
