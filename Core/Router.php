@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace app\Core;
 
 use function is_string;
 
@@ -16,7 +16,7 @@ class Router
     /**
      * @param Request $request
      */
-    public function __construct(\app\core\Request $request)
+    public function __construct(\app\Core\Request $request)
     {
         $this->request = $request;
     }
@@ -71,6 +71,7 @@ class Router
         $viewContent = $this->renderOnlyView($view);
         return str_replace('{{content}}', $viewContent, $layoutContent);
     }
+
     public function renderContent($viewContent)
     {
         $layoutContent = $this->layoutContent();
@@ -98,6 +99,15 @@ class Router
         ob_start();
         include_once(Application::$ROOT_DIR . "/Views/$view.php");
         return ob_get_clean();
+    }
+
+    /**
+     * @param int $a
+     * @param $b
+     * @return int
+     */
+    public function Sum(int $a,$b):int {
+        return $a + $b;
     }
 
 }
