@@ -11,5 +11,11 @@
       "email": "nhivo1604230@gmail.com"
     }
   ],
-  "require": {}
+  "require": {
+    "phpunit/phpunit": "^9.5"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
 }
