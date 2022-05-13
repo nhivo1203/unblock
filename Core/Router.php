@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Core;
+namespace Nhivonfq\Unlock\Core;
 
 use function is_string;
 
@@ -16,7 +16,7 @@ class Router
     /**
      * @param Request $request
      */
-    public function __construct(\app\Core\Request $request)
+    public function __construct(\Nhivonfq\Unlock\Core\Request $request)
     {
         $this->request = $request;
     }
@@ -79,14 +79,13 @@ class Router
     }
 
 
-
     /**
      * @return false|string
      */
     protected function layoutContent()
     {
         ob_start();
-        include_once(Application::$ROOT_DIR . "/Views/layouts/main.php");
+        include_once(__DIR__ . "/../Views/layouts/main.php");
         return ob_get_clean();
     }
 
@@ -97,7 +96,7 @@ class Router
     protected function renderOnlyView($view)
     {
         ob_start();
-        include_once(Application::$ROOT_DIR . "/Views/$view.php");
+        include_once(__DIR__ . "/../Views/$view.php");
         return ob_get_clean();
     }
 
@@ -106,7 +105,8 @@ class Router
      * @param $b
      * @return int
      */
-    public function Sum(int $a,$b):int {
+    public function Sum(int $a, $b): int
+    {
         return $a + $b;
     }
 

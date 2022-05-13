@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Core;
+namespace Nhivonfq\Unlock\Core;
 
 class Request
 {

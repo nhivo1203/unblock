@@ -1,9 +1,9 @@
 <?php declare (strict_types=1);
 
-namespace app\Tests\Router;
+namespace Nhivonfq\Tests\Router;
 
-use app\Core\Request;
-use app\Core\Router;
+use Nhivonfq\Unlock\Core\Request;
+use Nhivonfq\Unlock\Core\Router;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase

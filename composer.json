@@ -2,7 +2,12 @@
   "name": "nhivo/learningphp",
   "autoload": {
     "psr-4": {
-      "app\\": "./"
+      "Nhivonfq\\Unlock\\": "./"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Nhivonfq\\Tests\\": "Tests"
     }
   },
   "authors": [
@@ -19,3 +24,4 @@
     "roave/security-advisories": "dev-latest"
   }
 }
+
