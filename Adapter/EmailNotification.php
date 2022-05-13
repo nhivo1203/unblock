@@ -20,11 +20,11 @@ class EmailNotification implements NotificationInterface
     /**
      * @param string $title
      * @param string $message
-     * @return void
+     * @return string
      */
-    public function send(string $title, string $message): void
+    public function send(string $title, string $message)
     {
         mail($this->adminEmail, $title, $message);
-        echo "Sent email with title '$title' to '{$this->adminEmail}' that says '$message'.";
+        return "Sent email with title '$title' to '{$this->adminEmail}' that says '$message'.";
     }
 }

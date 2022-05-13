@@ -35,10 +35,10 @@ function clientCode(NotificationInterface $notification)
 
 }
 
-echo "Client code is designed correctly and works with email notifications:" . "<br>";
-$notification = new EmailNotification("developers@example.com");
-echo clientCode($notification);
-echo "<br>";
+//echo "Client code is designed correctly and works with email notifications:" . "<br>";
+//$notification = new EmailNotification("developers@example.com");
+//echo clientCode($notification);
+//echo "<br>";
 
 
 echo "The same client code can work with other classes via adapter: " . "<br>";

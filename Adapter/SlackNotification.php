@@ -28,7 +28,7 @@ class SlackNotification implements NotificationInterface
      * @param string $message
      * @return void
      */
-    public function send(string $title, string $message): void
+    public function send(string $title, string $message)
     {
         $slackMessage = "#" . $title . "# " . strip_tags($message);
         $this->slack->logIn();
