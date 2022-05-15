@@ -22,3 +22,4 @@ class SendNotificationFacade
         echo $this->slack->deleteSlackNotification("Slack ID");
     }
 }
+
