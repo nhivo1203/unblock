@@ -4,12 +4,23 @@ namespace Nhivonfq\Unlock\Facade;
 
 class FacadeEmailNotification
 {
-    public function sendEmail (string $title,string $message) {
+    /**
+     * @param string $title
+     * @param string $message
+     * @return string
+     */
+    public function sendEmail(string $title, string $message): string
+    {
         return "Email sent with title: $title and message: $message";
     }
 
-    public function deleteEmail ($emailID) {
+    /**
+     * @param $emailID
+     * @return string
+     */
+
+    public function deleteEmail($emailID): string
+    {
         return "Deleted email with ID: $emailID";
     }
 }
-
