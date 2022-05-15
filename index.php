@@ -40,13 +40,13 @@ $app->run();
  */
 
 
-function clientCode(NotificationInterface $notification)
-{
-
-    return $notification->send("Website is down!",
-        "Our website is not responding. Call admins and bring it up!");
-
-}
+//function clientCode(NotificationInterface $notification)
+//{
+//
+//    return $notification->send("Website is down!",
+//        "Our website is not responding. Call admins and bring it up!");
+//
+//}
 
 //echo "Client code is designed correctly and works with email notifications:" . "<br>";
 //$notification = new EmailNotification("developers@example.com");
