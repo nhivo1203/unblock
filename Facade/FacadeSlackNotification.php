@@ -12,3 +12,4 @@ class FacadeSlackNotification
         return "Deleted email with ID: $slacknotificationID";
     }
 }
+
