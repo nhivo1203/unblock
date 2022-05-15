@@ -11,9 +11,9 @@ use Nhivonfq\Unlock\Core\Application;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-//
-//$app = new Application();
-//
+
+$app = new Application();
+
 $email = new FacadeEmailNotification;
 $slack = new FacadeSlackNotification;
 $facade = new SendNotificationFacade($email, $slack);
@@ -21,18 +21,17 @@ $facade = new SendNotificationFacade($email, $slack);
 $facade->SendNotification();
 
 
-//
-//$app->router->get('/', 'home');
-//
-//$app->router->get('/contact', 'contact');
-//
-//$app->router->post('/contact', function() {
-//    return 'handling submitted data';
-//});
-//
-//$app->run();
+$app = new Application(__DIR__);
 
+$app->router->get('/', 'home');
 
+$app->router->get('/contact', 'contact');
+
+$app->router->post('/contact', function() {
+    return 'handling submitted data';
+});
+
+$app->run();
 
 
 /**
@@ -40,13 +39,14 @@ $facade->SendNotification();
  * @return string
  */
 
-//function clientCode(NotificationInterface $notification)
-//{
-//
-//    return $notification->send("Website is down!",
-//        "Our website is not responding. Call admins and bring it up!");
-//
-//}
+
+function clientCode(NotificationInterface $notification)
+{
+
+    return $notification->send("Website is down!",
+        "Our website is not responding. Call admins and bring it up!");
+
+}
 
 //echo "Client code is designed correctly and works with email notifications:" . "<br>";
 //$notification = new EmailNotification("developers@example.com");
