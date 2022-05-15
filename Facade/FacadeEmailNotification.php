@@ -12,3 +12,4 @@ class FacadeEmailNotification
         return "Deleted email with ID: $emailID";
     }
 }
+
