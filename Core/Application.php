@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Core;
+namespace Nhivonfq\Unlock\Core;
 /**
  * Class Application
  * @package app\core
@@ -12,6 +12,10 @@ class Application
      */
     public static string $ROOT_DIR;
     /**
+     * @var Application
+     */
+    public static Application $app;
+    /**
      * @var Router
      */
     public Router $router;
@@ -19,22 +23,16 @@ class Application
      * @var Request
      */
     public Request $request;
-
     /**
      * @var Response
      */
     public Response $response;
-    /**
-     * @var Application
-     */
-    public static Application $app;
 
     /**
      * @param $rootPath
      */
-    public function __construct($rootPath)
+    public function __construct()
     {
-        self::$ROOT_DIR = $rootPath;
         self::$app = $this;
         $this->request = new Request();
         $this->response = new Response();

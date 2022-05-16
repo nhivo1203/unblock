@@ -1,9 +1,10 @@
 <?php
+use Nhivonfq\Unlock\Core\Application;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
-use app\Core\Application;
 
-$app = new Application(__DIR__);
+$app = new Application();
 
 $app->router->get('/', 'home');
 
@@ -15,4 +16,4 @@ $app->router->post('/contact', function() {
 
 $app->run();
 
-?>
+
