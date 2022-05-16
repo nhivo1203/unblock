@@ -7,11 +7,12 @@ class SlackNotification implements NotificationInterface
     /**
      * @var SlackApi
      */
-    private $slack;
+    private SlackApi $slack;
     /**
      * @var string
      */
-    private $chatId;
+    private string $chatId;
+
 
     /**
      * @param SlackApi $slack
