@@ -14,24 +14,20 @@ class SendNotificationFacade
      */
     public FacadeSlackNotification $slack;
 
-    /**
-     * @param FacadeEmailNotification $email
-     * @param FacadeSlackNotification $slack
-     */
-    public function __construct(FacadeEmailNotification $email, FacadeSlackNotification $slack)
+    public function __construct()
     {
-        $this->email = $email;
-        $this->slack = $slack;
+        $this->email = new FacadeEmailNotification;
+        $this->slack = new FacadeSlackNotification;
     }
 
     /**
-     * @return void
+     * @return string
      */
-    public function SendNotification(): void
+    public function SendNotification(): string
     {
-        echo $this->email->sendEmail("Email Title", "Email Message") . "<br>";
-        echo $this->email->deleteEmail("Email ID") . "<br>";
-        echo $this->slack->sendSlackNotification("Slack Title", "Slack Message") . "<br>";
-        echo $this->slack->deleteSlackNotification("Slack ID");
+        return $this->email->sendEmail("Email Title", "Email Message") . "<br>"
+            . $this->email->deleteEmail("Email ID") . "<br>"
+            . $this->slack->sendSlackNotification("Slack Title", "Slack Message") . "<br>"
+            . $this->slack->deleteSlackNotification("Slack ID");
     }
 }
